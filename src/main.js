@@ -61,7 +61,7 @@ router.beforeEach(async (to, from)=>{
     if(!is_auth && to.meta.requiresAuth){
         return {name: "logIn"};
     }else if(is_auth && to.meta.reverseAuth){
-        return {name: "transactions"}
+        return {name: "servicios"}
     }else{
         return true;
     }

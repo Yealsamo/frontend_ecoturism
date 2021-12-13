@@ -44,8 +44,8 @@ export default {
             this.signupData.balance = +this.signupData.balance;
             await this.$apollo.mutate({
                 mutation: gql`
-                mutation Mutation($credentials: LoginInput!, $signupData: SignupInput) {
-                login(credentials: $credentials) {
+                mutation Mutation($signupData: SignupInput) {
+                signup(signupData: $signupData) {
                     refresh
                     access
                     }
