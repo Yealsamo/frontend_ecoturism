@@ -4,6 +4,7 @@ import LogIn from './components/LogIn.vue'
 import SignUp from './components/SignUp.vue'
 import Transactions from './components/Transactions.vue'
 import Servicios from './components/Servicios.vue'
+import Plan from './components/Plan.vue'
 
 
 
@@ -35,6 +36,12 @@ const routes = [
     path: '/user/servicios',
     name: 'servicios',
     component: Servicios,
+    meta: { requiresAuth: true, reverseAuth: false }
+  },
+  {
+    path: '/user/plan',
+    name: 'plan',
+    component: Plan,
     meta: { requiresAuth: true, reverseAuth: false }
   },
 ]

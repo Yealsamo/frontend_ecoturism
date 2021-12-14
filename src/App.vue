@@ -27,7 +27,7 @@ export default {
       verifyAuth(){
         this.is_auth = localStorage.getItem("is_auth") || false;
         if(this.is_auth){
-          this.loadServicios();
+          this.loadPlan();
         }else{
           this.loadLogIn();
         }
@@ -43,6 +43,9 @@ export default {
       },
       loadServicios(){
         this.$router.push({name: "servicios"});
+      },
+      loadPlan(){
+        this.$router.push({name: "plan"});
       },
       completedLogin(data){
         this.is_auth = true;
